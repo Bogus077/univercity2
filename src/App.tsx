@@ -3,12 +3,15 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './assets/fonts/style.css';
 import './assets/global.scss';
+import { frontendRoutes } from './consts';
+import { MainPage } from './pages/MainPage';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={'/'} element={<>324</>} />
+        <Route path={'/'} element={<MainPage />} />
+        <Route path={frontendRoutes.main} element={<MainPage />} />
 
         {/* <Route
         path={frontendRoutes.index}
